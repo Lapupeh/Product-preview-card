@@ -1,0 +1,157 @@
+:root {
+    /*COLOURS*/
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /*TYPOGRAPHY*/
+    --font-family1: "Montserrat", serif;
+    --font-family2: "Fraunces",  serif;
+    --font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Cream);
+    font-size: var(--font-size);
+    font-family: var(--font-family1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.card-container {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 20rem;
+    border-radius: 10px;
+} 
+.img{
+    width: 20rem;
+    height: 100%;
+
+}
+.card-information {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+h1 { 
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 0.5em;
+    margin-bottom: 1em;
+
+}
+h2{
+    font-family: var(--font-family2);
+    font-size: 2.2em;
+    color: var(--Very-dark-blue);
+    font-weight: 700;
+    margin-bottom: 0.8em;
+   
+}
+p{
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    padding-top: 0;
+}
+.price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.3em;
+    margin-bottom: 1em;
+    
+}
+.price .current-price{
+    font-family: var(--font-family2);
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--Dark-cyan);
+
+}
+.price .old-price{
+    font-size: 0.8em;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-size: 1em;
+    font-weight: 700;
+    padding: 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+button:hover{
+    background-color: hsl(158, 34%, 23%);
+
+}
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    border-radius: 15px;
+    
+}
+.img {
+    height: auto;
+
+}
+.card-information{
+    padding: 2.5em;
+}
+.add-to-cart {
+    margin-top: 1em;
+}
+h2 {
+    font-size: 2.4em;
+}
+h1 {
+    margin-bottom: 2em;
+}
+.price {
+    margin-top: 1em;
+}
+
+}
